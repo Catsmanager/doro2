@@ -40,8 +40,8 @@ function Map() {
     <div className="container-fluid">
       {/* Header Section */}
       <header className="mb-4">
-        <h1 className="h3 mb-0 text-gray-800">Welcome to the Pothole Monitoring Dashboard</h1>
-        <p className="lead">Monitor and manage pothole occurrences in different areas through interactive maps.</p>
+        <h1 className="h3 mb-0 text-gray-800">환영합니다</h1>
+        <p className="lead">ㅇㅇㅇㅇ</p>
       </header>
 
       {/* Overview Section */}
@@ -85,7 +85,7 @@ function Map() {
               </div>
               <div className="card-body">
                 <div id="mapA" style={{ height: '250px' }}></div>
-                <p className="mt-3">This map shows the locations of pothole occurrences. Use it to monitor and manage the incidents in area A.</p>
+                <p className="mt-3">A에 대한 간략한 설명</p>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@ function Map() {
               </div>
               <div className="card-body">
                 <div id="mapB" style={{ height: '250px' }}></div>
-                <p className="mt-3">This map provides a detailed view of high-risk pothole areas. It is focused on area B for enhanced monitoring.</p>
+                <p className="mt-3">Map B에 대한 간략한 설명</p>
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@ function Map() {
               </div>
               <div className="card-body">
                 <div id="mapC" style={{ height: '250px' }}></div>
-                <p className="mt-3">Map C is used to track and manage incidents in area C. This map is optimized for quick updates and overviews.</p>
+                <p className="mt-3">Map C 에 대한 간략한 설명</p>
               </div>
             </div>
           </div>
@@ -120,11 +120,11 @@ function Map() {
       <section>
         <div className="card shadow mb-4">
           <div className="card-header py-3">
-            <h6 className="m-0 font-weight-bold text-primary">Important Notices</h6>
+            <h6 className="m-0 font-weight-bold text-primary">알립니다</h6>
           </div>
           <div className="card-body">
-            <p>Keep an eye on the reported potholes and ensure timely maintenance to avoid accidents. The maps above are updated regularly with the latest data.</p>
-            <p>For further details or to report a new pothole, please visit the respective area’s map and use the provided tools to add or update information.</p>
+            <p>추후수정</p>
+            <p>내용</p>
           </div>
         </div>
       </section>

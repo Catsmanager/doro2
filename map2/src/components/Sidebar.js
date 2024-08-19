@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 function Sidebar({ isOpen, toggleSidebar }) {
@@ -23,38 +23,54 @@ function Sidebar({ isOpen, toggleSidebar }) {
 
       {/* Sidebar Menu Items */}
       <li className="nav-item">
-        <Link to="/map-a" className="nav-link" onClick={toggleSidebar}>
+        <Link to="/map-a" className="nav-link">
+          <i className="fas fa-map-marker-alt"></i>
           <span>A</span>
         </Link>
       </li>
       <li className="nav-item">
-        <Link to="/map-b" className="nav-link" onClick={toggleSidebar}>
+        <Link to="/map-b" className="nav-link">
+          <i className="fas fa-map-marker-alt"></i>
           <span>B</span>
         </Link>
       </li>
       <li className="nav-item">
-        <Link to="/map-c" className="nav-link" onClick={toggleSidebar}>
+        <Link to="/map-c" className="nav-link">
+          <i className="fas fa-map-marker-alt"></i>
           <span>C</span>
         </Link>
       </li>
+
+      {/* Submenu Example */}
       <li className="nav-item">
-        <div className="nav-link" onClick={toggleIncidentSubmenu}>
+        <a
+          className={`nav-link ${incidentSubmenuOpen ? '' : 'collapsed'}`}
+          href="#"
+          onClick={toggleIncidentSubmenu}
+          data-toggle="collapse"
+          data-target="#collapseIncident"
+          aria-expanded={incidentSubmenuOpen}
+          aria-controls="collapseIncident"
+        >
+          <i className="fas fa-fw fa-wrench"></i>
           <span>사건 목록</span>
+        </a>
+        <div
+          id="collapseIncident"
+          className={`collapse ${incidentSubmenuOpen ? 'show' : ''}`}
+          aria-labelledby="headingIncident"
+          data-parent="#accordionSidebar"
+        >
+          <div className="bg-white py-2 collapse-inner rounded">
+            <h6 className="collapse-header">Manage Incidents:</h6>
+            <Link className="collapse-item" to="/incident-list" onClick={toggleSidebar}>
+              확인
+            </Link>
+            <Link className="collapse-item" to="/incident-register" onClick={toggleSidebar}>
+              등록
+            </Link>
+          </div>
         </div>
-        {incidentSubmenuOpen && (
-          <ul className="navbar-nav ml-3">
-            <li className="nav-item">
-              <Link to="/incident-list" className="nav-link" onClick={toggleSidebar}>
-                <span>확인</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/incident-register" className="nav-link" onClick={toggleSidebar}>
-                <span>등록</span>
-              </Link>
-            </li>
-          </ul>
-        )}
       </li>
 
       <hr className="sidebar-divider d-none d-md-block" />
@@ -68,6 +84,7 @@ function Sidebar({ isOpen, toggleSidebar }) {
 }
 
 export default Sidebar;
+
 
 
 
